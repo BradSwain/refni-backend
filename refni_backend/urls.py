@@ -17,14 +17,9 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-# from refni_backend.viewss import Empty
-from viewss import Empty
-import sys
+from refni_backend.refni_backend.views.Submission import SubmissionViewSet
 
 
-print('*******')
-print(sys.modules[__name__])
-print('*******')
 router = DefaultRouter()
 router.register(r'submission', viewset=SubmissionViewSet)
 
