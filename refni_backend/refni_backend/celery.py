@@ -3,7 +3,8 @@ import os
 from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proj.settings')
+# TODO: CHANGE SETTINGS IN PRODUCTION ENV
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'refni_backend.settings.development')
 
 app = Celery('refni_backend')
 
