@@ -34,7 +34,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'celery'
+    'rest_framework.authtoken',
+    'rest_auth',
+    'rest_auth.registration',
+    'celery',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [

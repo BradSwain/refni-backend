@@ -18,13 +18,16 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from refni_backend.refni_backend.views.Submission import SubmissionViewSet
+from refni_backend.refni_backend.views.UserRegister import UserRegisterView
 
+api_root = 'api/'
 
 router = DefaultRouter()
-router.register(r'submission', viewset=SubmissionViewSet)
+router.register(api_root + r'submission', viewset=SubmissionViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'api/register/', UserRegisterView.as_view()),
 ]

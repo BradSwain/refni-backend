@@ -18,7 +18,6 @@ class Submission(models.Model):
         ('RL', 'Repository Link Upload'),
         ('FU', 'File Upload'),
     )
-    id = models.AutoField(primary_key=True)
     created = models.DateTimeField(auto_now_add=True)
     tag = models.CharField(max_length=100, blank=False)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES)

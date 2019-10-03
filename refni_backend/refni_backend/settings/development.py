@@ -11,8 +11,11 @@ CELERY_BROKER_ADDRESS = 'amqp://127.0.0.1'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'refni_db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'refni',
+        'HOST': 'mongodb+srv://refni-ugp06.mongodb.net/test',
+        'USER': 'ClouDroid',
+        'PASSWORD': 'WeAreAllOnThe4thFloor'
     }
 }
 
