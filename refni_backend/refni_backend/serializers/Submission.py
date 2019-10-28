@@ -8,6 +8,7 @@ from django.db import transaction
 
 
 class SubmissionSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
     created = serializers.DateTimeField(read_only=True)
     tag = serializers.CharField(max_length=100, allow_blank=True, default='')
     status = serializers.ChoiceField(choices=Submission.STATUS_CHOICES, read_only=True)

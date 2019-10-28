@@ -6,14 +6,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-DB_SERVER_ADDRESS = '127.0.0.1'
+# DB_SERVER_ADDRESS = '127.0.0.1'
+DB_SERVER_ADDRESS = 'mongodb+srv://refni-ugp06.mongodb.net/test'
 CELERY_BROKER_ADDRESS = 'amqp://127.0.0.1'
 
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'refni',
-        'HOST': 'mongodb+srv://refni-ugp06.mongodb.net/test',
+        'HOST': DB_SERVER_ADDRESS,
         'USER': 'ClouDroid',
         'PASSWORD': 'WeAreAllOnThe4thFloor'
     }
