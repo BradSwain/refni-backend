@@ -19,8 +19,11 @@ DATABASES = {
     }
 }
 
-# FULL PATH to the folder where you store uploaded files
+# FULL PATH to the folder where you store uploaded files (WE'RE NOT SAVING FILES LOCALLY!)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploaded_files')
+
+# Default file storage engine
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Debug only. DO NOT USE ALLOW_ALL in production.
 CORS_ORIGIN_ALLOW_ALL = True

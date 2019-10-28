@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 # A model for user submission.
 class Submission(models.Model):
     STATUS_CHOICES = (
+        ('UPL', 'File uploaded'),
         ('RDY', 'Ready for evaluation'),
         ('ICP', 'Information incomplete'),
         ('CCL', 'Cancelled'),
@@ -24,13 +25,13 @@ class Submission(models.Model):
     description = models.TextField()
     type = models.CharField(max_length=20, choices=TYPE_CHOICES)
     # We'll use the default django user model
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
 
     # We allow uploading via github link or file upload
     repo = models.URLField(max_length=200)
     # Should we enforce the File to be a zipped/gzipped archive?
     # Should we allow them to upload folders directly? (I guess not)
-    attachments = models.FileField()
+    attachment = models.FileField()
 
     def __str__(self):
         return self.tag
