@@ -43,5 +43,7 @@ class SubmissionSerializer(serializers.Serializer):
         if (attrs['repo'] is None or attrs['repo'] == '') and attrs['type'] == Submission.TYPE_CHOICES[0][0]:
             raise serializers.ValidationError('Please enter repository URL if you choose your upload '
                                               'type to be "Repository Link Upload".')
+        if attrs['user']['email'] is None or attrs['user']['email'].strip() == '':
+            raise serializers.ValidationError('Email cannot be empty.')
         return attrs
 
