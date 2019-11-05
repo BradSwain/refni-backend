@@ -8,7 +8,7 @@ ALLOWED_HOSTS = []
 
 # DB_SERVER_ADDRESS = '127.0.0.1'
 DB_SERVER_ADDRESS = 'mongodb+srv://refni-ugp06.mongodb.net/test'
-GOOGLE_CLOUD_STORAGE = 'gs://cloudroid_public'
+GOOGLE_CLOUD_STORAGE = 'cloudroid_public'
 CELERY_BROKER_ADDRESS = 'amqp://127.0.0.1'
 
 DATABASES = {
