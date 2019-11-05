@@ -8,6 +8,7 @@ ALLOWED_HOSTS = []
 
 # DB_SERVER_ADDRESS = '127.0.0.1'
 DB_SERVER_ADDRESS = 'mongodb+srv://refni-ugp06.mongodb.net/test'
+GOOGLE_CLOUD_STORAGE = 'gs://cloudroid_public'
 CELERY_BROKER_ADDRESS = 'amqp://127.0.0.1'
 
 DATABASES = {
@@ -24,7 +25,8 @@ DATABASES = {
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploaded_files')
 
 # Default file storage engine
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = GOOGLE_CLOUD_STORAGE
 
 # Debug only. DO NOT USE ALLOW_ALL in production.
 CORS_ORIGIN_ALLOW_ALL = True
