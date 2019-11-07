@@ -1,5 +1,5 @@
 # Any dev settings can be placed here
-from refni_backend.refni_backend.settings.base import *
+from refni_backend.settings.base import *
 
 
 DEBUG = True

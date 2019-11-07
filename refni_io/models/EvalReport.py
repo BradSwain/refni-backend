@@ -1,5 +1,5 @@
 from django.db import models
-from refni_backend.refni_backend.models.Submission import Submission
+from refni_io.models.Submission import Submission
 
 
 # A model for evaluation report

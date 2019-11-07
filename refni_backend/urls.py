@@ -17,8 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-from refni_backend.refni_backend.views.Submission import SubmissionViewSet
-from refni_backend.refni_backend.views.EvalReport import EvalReportViewSet
+from refni_service.views.Submission import SubmissionViewSet
+from refni_service.views.EvalReport import EvalReportViewSet
 
 api_root = 'api/'
 

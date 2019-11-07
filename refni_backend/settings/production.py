@@ -1,5 +1,5 @@
 # Production settings. Settings must be safe.
-from refni_backend.refni_backend.settings.base import *
+from refni_backend.settings.base import *
 
 
 DEBUG = False
