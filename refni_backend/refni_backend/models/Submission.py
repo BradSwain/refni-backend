@@ -1,5 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
+import os
+
+
+def update_filename(instance, filename):
+    path = 'upload/'
+    format = '/'.join([str(instance.user.id), datetime.now().strftime('%H%M%S'), filename])
+    return os.path.join(path, format)
 
 
 # A model for user submission.
@@ -31,7 +39,7 @@ class Submission(models.Model):
     repo = models.URLField(max_length=200)
     # Should we enforce the File to be a zipped/gzipped archive?
     # Should we allow them to upload folders directly? (I guess not)
-    attachment = models.FileField()
+    attachment = models.FileField(upload_to=update_filename)
 
     def __str__(self):
         return self.tag
