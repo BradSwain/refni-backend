@@ -1,5 +1,6 @@
 if [ "$1" == "" ] || [ $# -gt 1 ]; then
     echo "Usage: scripts/celery.sh {start|restart|stop}"
+    echo "And remember to run it at project root."
     exit 0
 fi
 

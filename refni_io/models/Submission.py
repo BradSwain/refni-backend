@@ -45,7 +45,7 @@ class Submission(models.Model):
         return self.tag
     
     def mark_ready(self):
-        self.change_status(STATUS_CHOICES[1][0])
+        self.change_status(self.STATUS_CHOICES[1][0])
     
     def change_status(self, status):
         self.status = status
