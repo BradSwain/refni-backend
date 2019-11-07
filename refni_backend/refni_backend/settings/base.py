@@ -26,13 +26,13 @@ SECRET_KEY = 's+x@rijh$ixbs(2k-i91el!76aiy@4%!3mj96xas6k(as365@#'
 # Application definition
 
 INSTALLED_APPS = [
-    'refni_backend',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'refni_backend',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
@@ -123,7 +123,8 @@ STATIC_URL = '/static/'
 
 # Put rest-framework settings here
 REST_FRAMEWORK = {
-
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
 
 REST_AUTH_SERIALIZERS = {

@@ -8,5 +8,5 @@ class RefniBackendConfig(AppConfig):
         from django.db.models.signals import post_save
         from refni_backend.refni_backend.signals.SubmissionPostSave import dispatch_task
 
-        post_save.connect(dispatch_task, sender='refni_backend.refni_backend.Submission',
+        post_save.connect(dispatch_task, sender='refni_backend.Submission',
                           dispatch_uid='submission_dispatch')
